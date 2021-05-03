@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const cors = require('cors');
 
 const PORT = process.env.PORT || 3000;
 
@@ -11,9 +12,10 @@ const connectDB = require('./config/db');
 connectDB();
 //Cors
 const corseOptions= {
-    origin : ['http://localhost:3000','http://localhost:5000','http://localhost:3300']
+    origin : process.env.ALLOWED_CLIENTS.split(',')
     
 }
+app.use(cors(corseOptions));
 //template engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine','ejs');
