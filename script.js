@@ -22,11 +22,8 @@ async function fetchData()
             }
         }
         console.log("Job Done");
-
     }
 
 
 }
-fetchData().then(() => {
-    process.exit();
-})
+fetchData().then(process.exit);
