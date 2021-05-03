@@ -12,9 +12,10 @@ const connectDB = require('./config/db');
 connectDB();
 
 //Cors
-
+var allowedOrigins = ['http://localhost:3000',
+                      'http://yourapp.com'];
 const corsOptions = {
-    origin : process.env.Allowed_Clients.split(',')
+    origin : allowedOrigins,
 }
 app.use(cors(corsOptions)),
 //template engine
