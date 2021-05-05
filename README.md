@@ -7,7 +7,7 @@ The application is deployed in heroku server.
 # try this link https://chintalanavaneeth.github.io/fileshare-y/
 
 I have also made an app version of it you can also download the apk
-Download app-debug.apk in your mobile..
+Download "#app-debug.apk" in your mobile..
 
 #process
 1. upload a file
